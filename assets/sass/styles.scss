@@ -1,0 +1,21 @@
+// common
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+}
+
+#__nuxt {
+    font-family: Avenir,
+    Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// pages
+@import 'pages/_home.scss';
+@import 'pages/_test1.scss';
