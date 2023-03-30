@@ -8,8 +8,8 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="test1">
-            test1 Page
+          <NuxtLink to="flow">
+            flow Page
           </NuxtLink>
         </li>
       </ul>
