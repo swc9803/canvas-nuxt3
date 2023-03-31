@@ -22,6 +22,8 @@ class Particle {
     this.maxLength = Math.floor(Math.random() * 200 + 10)
     this.angle = 0
     this.timer = this.maxLength * 2
+    this.colors = ['#4c026b', '#730d9e', '#9622c7', '#b44ae0', '#cd72f2']
+    this.color = this.colors[Math.floor(Math.random() * this.colors.length)]
   }
 
   draw (context) {
@@ -30,6 +32,7 @@ class Particle {
     for (let i = 0; i < this.history.length; i++) {
       context.lineTo(this.history[i].x, this.history[i].y)
     }
+    context.strokeStyle = this.color
     context.stroke()
   }
 
@@ -70,14 +73,14 @@ class Effect {
     this.width = width
     this.height = height
     this.particles = []
-    this.numberOfParticles = 1000
-    this.cellSize = 30
+    this.numberOfParticles = 1300
+    this.cellSize = 20
     this.rows = 0
     this.cols = 0
     this.flowField = []
-    this.curve = 5
-    this.zoom = 0.1
-    this.debug = true
+    this.curve = 1.5
+    this.zoom = 0.4
+    this.debug = false
     this.init()
 
     window.addEventListener('keydown', (e) => {
